@@ -1,0 +1,157 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Issue de formulaire</title>
+        <meta charset="utf-8">
+        <style>
+            body{}
+            #section{ width:500px;
+                      margin:20px auto;
+                      box-shadow: 5px 10px 20px 10px;
+                      padding:30px; 
+                background-color: lightgray
+            }
+            
+            #nom,#prenom,#birth,#password,#email,#url,#tel,#age{position:relative;
+                 float:right;
+                  margin:0ox auto;
+                width:150px;
+                height:20px;
+            }
+        
+            #other{ width:150px;
+                height:20px;
+                float:right;
+            }
+        
+            
+            #envoie{
+                float:right;
+                margin-top:10px;
+                    width:100px;
+                    height:30px;
+            }
+            #secret-question {float:right;
+                              width:250px;
+                              height:20px}
+            #password2{
+                   float:right;
+                   width:150px;
+                   height: 20px;
+                
+            }
+            legend{font-style:oblique;
+                   font-weight: bold;
+                   font-size: 20px;
+                   text-transform: uppercase;}
+             #info-personnelle:hover{box-shadow: 20px 0px 20px gray;
+                                    background-color: beige;}
+            #coord-num:hover{ box-shadow: 20px 0px 20px gray;
+                background-color: beige;}
+            #secure:hover{box-shadow: 20px 0px 20px gray;
+                                    background-color: beige;}
+            #info-civil:hover{box-shadow: 20px 0px 20px gray;
+                                    background-color: beige;}}
+            
+                
+                 
+            
+        </style>
+         </head>
+    <body>
+        
+        <form>
+            <fieldset id="section">
+                <fieldset id="info-personnelle">
+                    <legend>Informations personelles</legend>
+            <label for="nom">Entrer votre nom:</label>
+            <input type="text" id="nom" name="nom" autofocus="autofocus" autocomlete="on" required><br><br>
+            <label for="prenom">Entrer votre prénom:</label>
+            <input type="text" id="prenom" name="prenom" required><br><br>
+            <label for="birth">Date de naissance:</label>
+            <input type="date" id="birth" name="birth"><br><br>
+             <label for="age">Entrer votre age</label>
+            <input type="age" id="age" name="age" max="70" min="1"><br><br>
+                    </fieldset>
+                <fieldset id="coord-num">
+                    <legend>Coordonnées numériques</legend>
+                 <label for="tel">Entere votre téléphone </label>
+            <input type="number" id="tel" name="tel" required><br><br>
+                 <label for="email">Entere votre e-mail</label>
+            <input type="email" id="email" name="email" placeholder="exemple.exemple@gmail.com" required><br><br>
+            <label for="url">Entere votre site (si vous possédez un)</label>
+            <input type="url" id="url" name="url"><br><br>
+                    </fieldset>
+                <fieldset id="secure">
+                    <legend>Sécurités</legend>
+                    <label for="password">Entrer un mot de passe</label>
+            <input type="password" id="password" name="mot de passe" required><br>
+           <br>
+                    <label for="password">Réecriver le mot de passe</label>
+            <input type="password" id="password2" name="mot de passe nv" required><br><br>
+                    <label for="prec">Coisissez la question secrète</label>
+                    <select id="secret-question">
+                        <option value="friendName">Quel est le nom de votre ami proche</option>
+                        <option value="petsname">Quel est le nom de votre animal doméstique?</option>
+                        <option value="football">Tu aime quoi?ESS ou EST ou CSS ou CA</option>
+                               
+                    </select>
+                    <label></label>
+                </fieldset>
+                <fieldset id="info-civil">
+                    <legend>Informations civiles</legend>
+            <label for="residence">Pays de residence</label> 
+            <select id="other" name="residence">
+                <optgroup label="afrique">
+                <option value="Tunisie">Tunisie</option>
+                <option value="Algérie">Algérie</option>
+                <option value="Marroc">Marroc</option>        
+                <option value="Togo">Togo</option>
+                <option value="Egypt">Egypt</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option value="La france">La France</option>
+                    <option value="Italie">Italie</option>
+                    <option value="Belgique">Belgique</option>
+                    <option value="Lybie">Pays de Galle</option>
+                    <option value="Royaume uni">Royaume Uni</option>
+                </optgroup>
+                <optgroup label="Amérique">
+                    <option value="USA">USA</option>
+                    <option value="CANADA">CANADA</option>
+                    <option value="Péru">Péru</option>
+                    <option value="Brésil">Brésil</option> 
+                    <option value="KOSTARICA">Kostarica</option>
+                </optgroup>
+            </select><br><br>
+           
+            
+            <label>Sexe:</label>
+            <input type="radio" id="homme" name="sexe" required>
+            <label for="homme">Homme</label>
+            <input type="radio" id="femme" name="sexe" required>
+            <label for="femme">Femme</label><br><br>
+            <label>Etat civile:</label>
+            <input type="radio" id="mineur" name="civil" required>
+            <label for="mineur">Mineur</label>
+            <input type="radio" id="majeur" name="civil" required>
+            <label for="majeur">Majeur</label><br><br>
+            
+            <label>Quels sports pratiquez vous?</label>
+            <input type="checkbox" id="natation" name="sort">
+            <label for="natation">Natation</label>
+            <input type="checkbox" id="Course" name="sport">
+            <label for="Course">Course</label>
+            <input type="checkbox" id="Vélo" name="sport">
+            <label for="vélo">Vélo</label><br><br>
+            <label>Donnez une petite présentation:&nbsp;&nbsp;&nbsp;</label>
+            <textarea required></textarea>
+            </fieldset>
+                <input type="submit" id="envoie" value="Envoyer">
+            </fieldset>
+        </form>
+    </body>
+</html>
+    
+    
+    
